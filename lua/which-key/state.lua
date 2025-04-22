@@ -233,6 +233,11 @@ function M.execute(state, key, node)
     if vim.v.register ~= Util.reg() and state.mode.mode ~= "i" and state.mode.mode ~= "c" then
       keystr = '"' .. vim.v.register .. keystr
     end
+  else
+    -- keep v:count in xo modes
+    if vim.v.count > 0 then
+      keystr = vim.v.count .. keystr
+    end
   end
   Util.debug("feedkeys", tostring(state.mode), keystr)
   local feed = vim.api.nvim_replace_termcodes(keystr, true, true, true)
