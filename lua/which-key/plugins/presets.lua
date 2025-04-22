@@ -162,19 +162,17 @@ M.nav = {
   { "L", desc = "Last line of window" },
   { "M", desc = "Middle line of window" },
   { "[%", desc = "Previous unmatched group" },
-  { "[(", desc = "Previous (" },
-  { "[<", desc = "Previous <" },
+  { "[(", desc = "Previous unmatched parent (" },
   { "[M", desc = "Previous method end" },
   { "[m", desc = "Previous method start" },
   { "[s", desc = "Previous misspelled word" },
-  { "[{", desc = "Previous {" },
+  { "[{", desc = "Previous unmatched {" },
   { "]%", desc = "Next unmatched group" },
-  { "](", desc = "Next (" },
-  { "]<", desc = "Next <" },
+  { "])", desc = "Next unmatched parent )" },
   { "]M", desc = "Next method end" },
   { "]m", desc = "Next method start" },
   { "]s", desc = "Next misspelled word" },
-  { "]{", desc = "Next {" },
+  { "]}", desc = "Next unmatched }" },
 }
 
 M.g = {
